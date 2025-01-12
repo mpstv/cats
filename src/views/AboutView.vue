@@ -3,7 +3,7 @@
     <img src="../assets/logo.png" alt="logo" />
 
     <h2>This is Cats!</h2>
-    <p>Look at the cats and add likes to nicest!</p>
+    <p>Just look at the cats and then add nicest and cutest to favorites!</p>
     <p>
       This application simply showing cats from
 

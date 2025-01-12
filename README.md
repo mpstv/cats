@@ -1,26 +1,34 @@
-# cats
+# Cats!
 
-This template should help get you started developing with Vue 3 in Vite.
+This project developed with Vue 3 in Vite. Just look at the cats and then add nicest and cutest to favorites!
 
-## Project Setup
+![cats](./cats.png)
+
+# Credits
+
+Project use api from https://cataas.com/ website.
+
+# Commands
+
+### Install packages
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Run for development
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Build result bundle
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Lint
 
 ```sh
 npm run lint
