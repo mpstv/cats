@@ -10,8 +10,4 @@ const msg = ref('Hello world')
   </div>
 </template>
 
-<style scoped>
-h1 {
-  color: coral;
-}
-</style>
+<style scoped></style>
