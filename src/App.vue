@@ -1,18 +1,19 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import { Routes } from './router';
 
 const links = [
   {
     text: 'Home',
-    url: '/',
+    url: Routes.home,
   },
   {
     text: 'Favorites',
-    url: '/favorites',
+    url: Routes.favorites,
   },
   {
     text: 'About',
-    url: '/about',
+    url: Routes.about,
   },
 ]
 </script>
@@ -22,7 +23,7 @@ const links = [
     class="mb-4 flex min-h-16 flex-row items-center justify-between border-b border-dashed border-black px-10 py-1.5 dark:border-white"
   >
     <div class="flex flex-row items-center gap-12">
-      <RouterLink to="/">
+      <RouterLink :to="Routes.home">
         <img class="h-20 min-h-20 w-20 min-w-20" src="./assets/logo.png" alt="logo" />
       </RouterLink>
 
