@@ -10,6 +10,8 @@ const store = useCatsStore()
 
 <template>
   <div class="flex flex-row flex-wrap gap-5">
+    <p class="text-center grow" v-if="!store.cats.length">You haven't added anything to your favorites yet.</p>
+
     <div
       v-for="cat in store.cats"
       :key="cat"
