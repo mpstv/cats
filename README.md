@@ -1,6 +1,6 @@
 # Cats!
 
-This project developed with Vue 3 in Vite. Just look at the cats and then add nicest and cutest to favorites!
+This project developed with Vue 3, Vite and Tailwind. Just look at the cats and then add nicest and cutest to favorites!
 
 ![cats](./cats.png)
 
