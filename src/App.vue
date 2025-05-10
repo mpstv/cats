@@ -1,64 +1,45 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+
+const links = [
+  {
+    text: 'Home',
+    url: '/',
+  },
+  {
+    text: 'Favorites',
+    url: '/favorites',
+  },
+  {
+    text: 'About',
+    url: '/about',
+  },
+]
 </script>
 
 <template>
-  <nav class="top-bar">
-    <div class="logo">
-      <RouterLink to="/"><img src="./assets/logo.png" alt="logo" /></RouterLink>
-      <h1>Cats!</h1>
+  <nav
+    class="mb-4 flex min-h-16 flex-row items-center justify-between border-b border-dashed border-black px-10 py-1.5 dark:border-white"
+  >
+    <div class="flex flex-row items-center gap-12">
+      <RouterLink to="/">
+        <img class="h-20 min-h-20 w-20 min-w-20" src="./assets/logo.png" alt="logo" />
+      </RouterLink>
+
+      <h1 class="m-0">Cats!</h1>
     </div>
 
-    <div class="links">
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/favorites">Favorites</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
+    <div class="flex flex-row items-center gap-24">
+      <RouterLink
+        v-for="link in links"
+        :to="link.url"
+        :key="link.url"
+        class="px-1 py-2 no-underline hover:outline hover:outline-black hover:outline-dashed dark:hover:outline-white"
+      >
+        {{ link.text }}
+      </RouterLink>
     </div>
   </nav>
 
   <RouterView />
 </template>
-
-<style scoped>
-.top-bar {
-  min-height: 60px;
-  border-bottom: 1px dashed var(--text-color);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 40px;
-}
-
-.logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 50px;
-}
-
-.logo h1 {
-  margin: 0;
-}
-
-.logo img {
-  height: 80px;
-}
-
-.links {
-  display: flex;
-  flex-direction: row;
-  gap: 100px;
-  padding-right: 60px;
-}
-
-.links a {
-  color: var(--text-color);
-  text-decoration: none;
-  padding: 5px 10px;
-}
-
-.links a:hover {
-  outline: 1px dashed var(--text-color);
-}
-</style>

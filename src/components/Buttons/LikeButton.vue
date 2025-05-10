@@ -13,15 +13,9 @@ const store = useCatsStore()
 <template>
   <DefaultButton
     :disabled="disabled"
-    :class="{ active: store.cats.includes(catId) }"
+    :class="[store.cats.includes(catId) ? 'text-red-600' : '']"
     @click="() => store.addOrRemoveCat(catId)"
   >
     ♥
   </DefaultButton>
 </template>
-
-<style scoped>
-.active {
-  color: red;
-}
-</style>

@@ -3,18 +3,7 @@ const { disabled } = defineProps<{ disabled: boolean }>()
 </script>
 
 <template>
-  <button class="default-button" :disabled="disabled">
+  <button class="cursor-pointer disabled:opacity-50" :disabled="disabled">
     <slot></slot>
   </button>
 </template>
-
-<style scoped>
-.default-button {
-  all: unset;
-  cursor: pointer;
-}
-
-.default-button:disabled {
-  opacity: 0.5;
-}
-</style>

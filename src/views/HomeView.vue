@@ -20,40 +20,17 @@ nextCat()
 </script>
 
 <template>
-  <div class="container">
-    <p v-if="loading" class="loading">Loading...</p>
+  <div class="flex flex-col items-center gap-5 text-2xl">
+    <p v-if="loading" class="m-0 flex h-[70vh] flex-col items-center justify-center p-0">
+      Loading...
+    </p>
+
     <CatImg v-else :cat-id="catId" />
 
-    <div class="buttons">
+    <div class="flex flex-row gap-10">
       <LikeButton :disabled="loading" :cat-id="catId" />
 
       <DefaultButton :disabled="loading" @click="nextCat">↻</DefaultButton>
     </div>
   </div>
 </template>
-
-<style scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  font-size: 1.5em;
-}
-
-.loading {
-  padding: 0;
-  margin: 0;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-}
-</style>
